@@ -3,7 +3,6 @@ import tkinter as tk
 from tkinter import ttk, simpledialog, messagebox, scrolledtext
 import math
 import random
-
 from graph import Graph
 from caminho_mais_curto import dijkstra
 import database_manager as db_manager
@@ -54,7 +53,7 @@ class CityGraphApp:
         self._setup_mapa_tab()
 
         self.tab_camioes = ttk.Frame(self.notebook, padding="10")
-        self.notebook.add(self.tab_camioes, text='Cadastro de Camiões')
+        self.notebook.add(self.tab_camioes, text='Cadastro de Caminhões')
         self._setup_camioes_tab()
 
         self.tab_motoristas = ttk.Frame(self.notebook, padding="10")
@@ -600,8 +599,8 @@ class CityGraphApp:
         self.camiao_form_widgets['nome_camiao_entry'].delete(0,tk.END); self.camiao_form_widgets['nome_camiao_entry'].insert(0, camiao_data.get('nome_descricao',''))
         self.camiao_form_widgets['capacidade_camiao_entry'].delete(0,tk.END); self.camiao_form_widgets['capacidade_camiao_entry'].insert(0, str(camiao_data.get('capacidade','0.0') or '')) # Evita 'None'
         self.camiao_form_widgets['unidade_cap_camiao_combo'].set(camiao_data.get('unidade_capacidade','') if camiao_data.get('unidade_capacidade','') in UNIDADES_CAPACIDADE else (UNIDADES_CAPACIDADE[0] if UNIDADES_CAPACIDADE else ""))
-        self.camiao_form_widgets['tipo_veiculo_camiao_combo'].set(camiao_data.get('tipo_veiculo','') if camiao_data.get('tipo_veiculo','') in TIPOS_CAMIAO else (TIPOS_CAMIAO[0] if TIPOS_CAMIAO else ""))
-        self.camiao_form_widgets['estado_camiao_combo'].set(camiao_data.get('estado','') if camiao_data.get('estado','') in ESTADOS_CAMIAO else (ESTADOS_CAMIAO[0] if ESTADOS_CAMIAO else ""))
+        self.camiao_form_widgets['tipo_veiculo_camiao_combo'].set(camiao_data.get('tipo_veiculo','') if camiao_data.get('tipo_veiculo','') in TIPOS_camiao else (TIPOS_camiao[0] if TIPOS_camiao else ""))
+        self.camiao_form_widgets['estado_camiao_combo'].set(camiao_data.get('estado','') if camiao_data.get('estado','') in ESTADOS_camiao else (ESTADOS_camiao[0] if ESTADOS_camiao else ""))
         self.camiao_form_widgets['obs_camiao_text'].delete(1.0,tk.END); self.camiao_form_widgets['obs_camiao_text'].insert(tk.END, camiao_data.get('observacoes',''))
         
         loc_id = camiao_data.get('localizacao_atual_ponto_id')
