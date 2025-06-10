@@ -1,4 +1,3 @@
-# gui.py
 import tkinter as tk
 from tkinter import ttk, simpledialog, messagebox, scrolledtext
 import math
