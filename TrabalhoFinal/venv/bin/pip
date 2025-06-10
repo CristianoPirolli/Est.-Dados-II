@@ -1,5 +1,5 @@
 #!/bin/sh
-'''exec' "/home/cristiano-pirolli/Área de trabalho/Estrutura II/trabalhoFinal2/venv/bin/python3" "$0" "$@"
+'''exec' "/home/cristiano-pirolli/Área de trabalho/Estrutura II/Est.-Dados-II/TrabalhoFinal/venv/bin/python3" "$0" "$@"
 ' '''
 # -*- coding: utf-8 -*-
 import re
